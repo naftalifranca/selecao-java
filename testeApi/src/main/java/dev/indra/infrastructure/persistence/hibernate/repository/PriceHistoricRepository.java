@@ -25,5 +25,11 @@ public interface PriceHistoricRepository extends JpaRepository<PriceHistoric, Lo
 
     @Query("select AVG(h.valorCompra) from PriceHistoric h where h.municipio = UPPER(:municipio)")
     Double calcularMediaPrecoCompra(@Param("municipio") String municipio);
+
+    @Query("select AVG(h.valorVenda) from PriceHistoric h where h.bandeira = UPPER(:bandeira)")
+    Double calcularMediaPrecoVendaBandeira(@Param("bandeira") String bandeira);
+
+    @Query("select AVG(h.valorCompra) from PriceHistoric h where h.bandeira = UPPER(:bandeira)")
+    Double calcularMediaPrecoCompraBandeira(@Param("bandeira") String bandeira);
     
 }
