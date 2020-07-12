@@ -16,10 +16,17 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4508e760-1056-4095-9554-4427e3c1ef60" name="Default Changelist" comment="ajustes ambiente" />
+    <list default="true" id="4508e760-1056-4095-9554-4427e3c1ef60" name="Default Changelist" comment="ajustes ambiente">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/historicGasApi" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="SvnConfiguration">
@@ -54,7 +61,7 @@
       <updated>1594350233562</updated>
       <workItem from="1594350247290" duration="46000" />
       <workItem from="1594589749017" duration="38000" />
-      <workItem from="1594591807925" duration="254000" />
+      <workItem from="1594591807925" duration="1359000" />
     </task>
     <task id="LOCAL-00001" summary="ajustes ambiente">
       <created>1594591884893</created>
@@ -63,7 +70,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594591884893</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ajustes ambiente">
+      <created>1594592070046</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1594592070046</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,10 +103,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="ajustes ambiente" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1594350287787">
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594593158868">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594350287787" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1594593158868" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1594593167220">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594593167220" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1594592061447">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
