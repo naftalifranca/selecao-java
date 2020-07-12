@@ -1,9 +1,8 @@
 package dev.indra.domain.service;
 
+import dev.indra.domain.model.pricehistoric.PriceHistoric;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-
-import dev.indra.domain.model.pricehistoric.PriceHistoric;
 
 public interface PriceHistoricService extends BaseService<PriceHistoric> {
 

@@ -1,12 +1,11 @@
 package dev.indra.infrastructure.persistence.hibernate.repository;
 
+import dev.indra.domain.model.pricehistoric.PriceHistoric;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-
-import dev.indra.domain.model.pricehistoric.PriceHistoric;
 
 public interface PriceHistoricRepository extends JpaRepository<PriceHistoric, Long> {
 

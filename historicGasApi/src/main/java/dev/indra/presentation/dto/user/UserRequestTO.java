@@ -1,7 +1,5 @@
 package dev.indra.presentation.dto.user;
 
-import java.time.LocalDate;
-
 public class UserRequestTO {
 
     private String username;

@@ -1,10 +1,9 @@
 package dev.indra.infrastructure.service;
 
+import dev.indra.presentation.dto.shared.ResponseTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
-import dev.indra.presentation.dto.shared.ResponseTO;
 
 @Service
 public class ResponseService {

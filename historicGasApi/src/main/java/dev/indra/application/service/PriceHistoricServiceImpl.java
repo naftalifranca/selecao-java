@@ -1,15 +1,14 @@
 package dev.indra.application.service;
 
-import java.util.List;
-import java.util.Optional;
-
+import dev.indra.domain.model.pricehistoric.PriceHistoric;
+import dev.indra.domain.service.PriceHistoricService;
+import dev.indra.infrastructure.persistence.hibernate.repository.PriceHistoricRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import dev.indra.domain.model.pricehistoric.PriceHistoric;
-import dev.indra.domain.service.PriceHistoricService;
-import dev.indra.infrastructure.persistence.hibernate.repository.PriceHistoricRepository;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PriceHistoricServiceImpl implements PriceHistoricService {

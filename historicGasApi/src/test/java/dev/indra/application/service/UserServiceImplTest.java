@@ -1,11 +1,7 @@
 package dev.indra.application.service;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
-import java.time.LocalDate;
-import java.util.List;
-
+import dev.indra.domain.model.user.User;
+import dev.indra.domain.service.BaseService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +9,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import dev.indra.domain.model.user.User;
-import dev.indra.domain.service.BaseService;
+import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @ActiveProfiles("test")
 @SpringBootTest

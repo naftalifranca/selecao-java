@@ -1,22 +1,13 @@
 package dev.indra.application.controller;
 
-import static org.hamcrest.Matchers.hasSize;
-import static org.hamcrest.Matchers.is;
-import static org.mockito.BDDMockito.given;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
-import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.List;
-
+import dev.indra.WebApplication;
+import dev.indra.domain.model.user.User;
+import dev.indra.domain.service.BaseService;
 import dev.indra.infrastructure.service.ResponseService;
 import dev.indra.presentation.assembler.UserAssembler;
+import dev.indra.presentation.dto.shared.ResponseTO;
 import dev.indra.presentation.dto.user.UserRequestTO;
+import dev.indra.presentation.dto.user.UserResponseTO;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,11 +19,15 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 
-import dev.indra.WebApplication;
-import dev.indra.domain.model.user.User;
-import dev.indra.domain.service.BaseService;
-import dev.indra.presentation.dto.shared.ResponseTO;
-import dev.indra.presentation.dto.user.UserResponseTO;
+import java.util.Arrays;
+import java.util.List;
+
+import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.is;
+import static org.mockito.BDDMockito.given;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ActiveProfiles("test")
 //@SpringBootTest

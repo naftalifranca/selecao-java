@@ -1,13 +1,12 @@
 package dev.indra.application.service;
 
-import java.util.List;
-import java.util.Optional;
-
-import org.springframework.stereotype.Service;
-
 import dev.indra.domain.model.user.User;
 import dev.indra.domain.service.BaseService;
 import dev.indra.infrastructure.persistence.hibernate.repository.UserRepository;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements BaseService<User> {

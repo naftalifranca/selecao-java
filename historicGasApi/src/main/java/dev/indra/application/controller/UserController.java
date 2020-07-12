@@ -1,28 +1,18 @@
 package dev.indra.application.controller;
 
-import java.util.List;
-
 import dev.indra.domain.model.user.User;
 import dev.indra.domain.service.BaseService;
 import dev.indra.infrastructure.service.ResponseService;
 import dev.indra.presentation.assembler.UserAssembler;
+import dev.indra.presentation.dto.shared.ResponseTO;
 import dev.indra.presentation.dto.user.UserRequestTO;
+import dev.indra.presentation.dto.user.UserResponseTO;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import dev.indra.domain.service.BaseService;
-import dev.indra.presentation.dto.shared.ResponseTO;
-import dev.indra.presentation.dto.user.UserResponseTO;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")

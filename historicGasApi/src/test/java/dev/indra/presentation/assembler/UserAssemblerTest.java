@@ -1,16 +1,13 @@
 package dev.indra.presentation.assembler;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
-import java.time.LocalDate;
-
+import dev.indra.domain.model.user.User;
 import dev.indra.presentation.dto.user.UserRequestTO;
+import dev.indra.presentation.dto.user.UserResponseTO;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.test.context.ActiveProfiles;
 
-import dev.indra.domain.model.user.User;
-import dev.indra.presentation.dto.user.UserResponseTO;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @ActiveProfiles("test")
 @DisplayName("Assembler: Usuários")
