@@ -10,11 +10,10 @@ public class UserResponseTO {
 
     private LocalDate dateBirth;
 
-    public UserResponseTO(Long id, String username, LocalDate dateBirth) {
+    public UserResponseTO(Long id, String username) {
         super();
         this.id = id;
         this.username = username;
-        this.dateBirth = dateBirth;
     }
 
     public Long getId() {
@@ -31,14 +30,6 @@ public class UserResponseTO {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public LocalDate getDateBirth() {
-        return dateBirth;
-    }
-
-    public void setDateBirth(LocalDate dateBirth) {
-        this.dateBirth = dateBirth;
     }
 
     @Override
@@ -68,7 +59,7 @@ public class UserResponseTO {
 
     @Override
     public String toString() {
-        return String.format("UserResponseTO [id=%s, username=%s, dateBirth=%s]", id, username, dateBirth);
+        return String.format("UserResponseTO [id=%s, username=%s]", id, username);
     }
 
 }

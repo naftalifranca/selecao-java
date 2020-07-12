@@ -19,7 +19,6 @@ public class Sale {
     @Column
     private String nome;
 
-    @Temporal(TemporalType.DATE)
     @Column(nullable = false)
     private LocalDate dataColeta;
 

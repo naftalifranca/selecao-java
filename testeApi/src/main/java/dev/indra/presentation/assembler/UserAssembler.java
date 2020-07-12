@@ -13,11 +13,11 @@ public final class UserAssembler {
     }
     
     public static User from(UserRequestTO requestTO) {
-        return new User(requestTO.getUsername(), requestTO.getPassword(), requestTO.getDateBirth());
+        return new User(requestTO.getUsername(), requestTO.getPassword());
     }
     
     public static UserResponseTO from(User user) {
-        return new UserResponseTO(user.getId(), user.getUsername(), user.getDateBirth());
+        return new UserResponseTO(user.getId(), user.getUsername());
     }
     
     public static List<UserResponseTO> from(List<User> users) {

@@ -31,7 +31,6 @@ public class UserServiceImpl implements BaseService<User> {
         User savedUser = findBy(id);
         savedUser.setUsername(entity.getUsername());
         savedUser.setPassword(entity.getPassword());
-        savedUser.setDateBirth(entity.getDateBirth());
         return repository.save(savedUser);
     }
 

@@ -8,8 +8,6 @@ public class UserRequestTO {
 
     private String password;
 
-    private LocalDate dateBirth;
-
     public UserRequestTO() {
     }
 
@@ -29,17 +27,9 @@ public class UserRequestTO {
         this.password = password;
     }
 
-    public LocalDate getDateBirth() {
-        return dateBirth;
-    }
-
-    public void setDateBirth(LocalDate dateBirth) {
-        this.dateBirth = dateBirth;
-    }
-
     @Override
     public String toString() {
-        return String.format("UserRequest [username=%s, password=%s, dateBirth=%s]", username, password, dateBirth);
+        return String.format("UserRequest [username=%s, password=%s]", username, password);
     }
 
 }
