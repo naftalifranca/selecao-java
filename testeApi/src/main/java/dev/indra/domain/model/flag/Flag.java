@@ -1,7 +1,6 @@
 package dev.indra.domain.model.flag;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 
 @Entity
 @Table

@@ -1,7 +1,6 @@
 package dev.indra.domain.model.dealer;
 
 import dev.indra.domain.model.county.County;
-import dev.indra.domain.model.state.State;
 
 import javax.persistence.*;
 

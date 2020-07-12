@@ -3,7 +3,6 @@ package dev.indra.domain.model.county;
 import dev.indra.domain.model.state.State;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 
 @Entity
 @Table

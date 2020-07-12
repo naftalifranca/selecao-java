@@ -1,15 +1,18 @@
 package dev.indra.application.service;
 
-import dev.indra.domain.model.pricehistoric.PriceHistoric;
-import dev.indra.domain.service.BaseService;
-import dev.indra.infrastructure.persistence.hibernate.repository.PriceHistoricRepository;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+import dev.indra.domain.model.pricehistoric.PriceHistoric;
+import dev.indra.domain.service.PriceHistoricService;
+import dev.indra.infrastructure.persistence.hibernate.repository.PriceHistoricRepository;
+
 @Service
-public class PriceHistoricServiceImpl implements BaseService<PriceHistoric> {
+public class PriceHistoricServiceImpl implements PriceHistoricService {
 
     private final PriceHistoricRepository repository;
 
@@ -57,6 +60,40 @@ public class PriceHistoricServiceImpl implements BaseService<PriceHistoric> {
     @Override
     public void delete(Long id) {
         repository.deleteById(id);
+    }
+    
+    public Page<PriceHistoric> listaPorSigla(String sigla, Pageable pageable){
+    	return repository.findByRegiaoSiglaIgnoreCase(sigla, pageable);
+    }
+
+    @Override
+    public Double calcularMediaPrecoVenda(String municipio) {
+        return repository.calcularMediaPrecoVenda(municipio);
+    }
+
+    @Override
+    public Page<PriceHistoric> listGroupByRevendedor(Pageable pageSize) {
+        return repository.listGroupByRevendedor(pageSize);
+    }
+
+    @Override
+    public Page<PriceHistoric> listGroupByDataColeta(Pageable pageSize) {
+        return repository.listGroupByDataColeta(pageSize);
+    }
+
+    @Override
+    public Double calcularMediaPrecoCompra(String municipio) {
+        return repository.calcularMediaPrecoCompra(municipio);
+    }
+
+    @Override
+    public Double calcularMediaPrecoVendaBandeira(String bandeira) {
+        return repository.calcularMediaPrecoVendaBandeira(bandeira);
+    }
+
+    @Override
+    public Double calcularMediaPrecoCompraBandeira(String bandeira) {
+        return repository.calcularMediaPrecoCompraBandeira(bandeira);
     }
 
 }

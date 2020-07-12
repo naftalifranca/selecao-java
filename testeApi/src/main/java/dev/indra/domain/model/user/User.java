@@ -1,7 +1,5 @@
 package dev.indra.domain.model.user;
 
-import java.time.LocalDate;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
