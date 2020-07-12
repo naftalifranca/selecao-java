@@ -1,8 +1,6 @@
 package dev.indra.domain.model.sale;
 
-import dev.indra.domain.enumaration.UnidadeMedidaEnum;
 import dev.indra.domain.model.dealer.Dealer;
-import dev.indra.domain.model.flag.Flag;
 import dev.indra.domain.model.product.Product;
 
 import javax.persistence.*;
