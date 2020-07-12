@@ -1,35 +1,32 @@
-package dev.indra.domain.model.user;
+package dev.indra.domain.model.county;
 
+import dev.indra.domain.model.state.State;
+
+import javax.persistence.*;
 import java.time.LocalDate;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
 @Table
-public class User {
+public class County {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
-    private String username;
+    private String nome;
 
-    @Column
-    private String password;
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    private State uf;
 
-    public User() {
+    public County() {
     }
 
-    public User(String username, String password) {
+    public County(String nome, State uf) {
         super();
-        this.username = username;
-        this.password = password;
+        this.nome = nome;
+        this.uf = uf;
     }
 
     public Long getId() {
@@ -40,20 +37,20 @@ public class User {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getNome() {
+        return nome;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getPassword() {
-        return password;
+    public State getUf() {
+        return uf;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUf(State uf) {
+        this.uf = uf;
     }
 
     @Override
@@ -72,7 +69,7 @@ public class User {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        User other = (User) obj;
+        County other = (County) obj;
         if (id == null) {
             if (other.id != null)
                 return false;
@@ -83,7 +80,10 @@ public class User {
 
     @Override
     public String toString() {
-        return String.format("User [id=%s, username=%s, password=%s]", id, username, password);
+        return "County{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", uf=" + uf +
+                '}';
     }
-
 }

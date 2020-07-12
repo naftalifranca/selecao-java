@@ -1,36 +1,31 @@
-package dev.indra.domain.model.user;
+package dev.indra.domain.model.state;
 
-import java.time.LocalDate;
+import dev.indra.domain.enumaration.RegionEnum;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table
-public class User {
+public class State {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
-    private String username;
+    private String nome;
 
-    @Column
-    private String password;
-
-    public User() {
+    public State() {
     }
 
-    public User(String username, String password) {
+    public State(String nome) {
         super();
-        this.username = username;
-        this.password = password;
+        this.nome = nome;
     }
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private RegionEnum regiao;
 
     public Long getId() {
         return id;
@@ -40,20 +35,12 @@ public class User {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getNome() {
+        return nome;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     @Override
@@ -72,7 +59,7 @@ public class User {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        User other = (User) obj;
+        State other = (State) obj;
         if (id == null) {
             if (other.id != null)
                 return false;
@@ -83,7 +70,10 @@ public class User {
 
     @Override
     public String toString() {
-        return String.format("User [id=%s, username=%s, password=%s]", id, username, password);
+        return "State{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", regiao=" + regiao +
+                '}';
     }
-
 }

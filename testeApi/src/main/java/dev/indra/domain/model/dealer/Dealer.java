@@ -1,35 +1,32 @@
-package dev.indra.domain.model.user;
+package dev.indra.domain.model.dealer;
 
-import java.time.LocalDate;
+import dev.indra.domain.model.county.County;
+import dev.indra.domain.model.state.State;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table
-public class User {
+public class Dealer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
-    private String username;
+    private String nome;
 
-    @Column
-    private String password;
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    private County municipio;
 
-    public User() {
+    public Dealer() {
     }
 
-    public User(String username, String password) {
+    public Dealer(String nome, County municipio) {
         super();
-        this.username = username;
-        this.password = password;
+        this.nome = nome;
+        this.municipio = municipio;
     }
 
     public Long getId() {
@@ -40,20 +37,20 @@ public class User {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getNome() {
+        return nome;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getPassword() {
-        return password;
+    public County getMunicipio() {
+        return municipio;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setMunicipio(County municipio) {
+        this.municipio = municipio;
     }
 
     @Override
@@ -72,7 +69,7 @@ public class User {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        User other = (User) obj;
+        Dealer other = (Dealer) obj;
         if (id == null) {
             if (other.id != null)
                 return false;
@@ -83,7 +80,10 @@ public class User {
 
     @Override
     public String toString() {
-        return String.format("User [id=%s, username=%s, password=%s]", id, username, password);
+        return "Dealer{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", municipio=" + municipio +
+                '}';
     }
-
 }
