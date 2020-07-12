@@ -143,4 +143,13 @@ public class PriceHistoricController {
         return responseService.ok(map);
     }
 
+    @ApiOperation(value = "Calcula média de preço de venda e compra de combustível por bandeira")
+    @GetMapping("mediaPrecoCompraVendaByBandeira/{bandeira}")
+    public ResponseEntity<ResponseTO<HashMap<String, Double>>> calcularMediaPrecosCompraVendaBandeira(@RequestParam(value="bandeira") String bandeira) {
+        HashMap<String, Double> map = new HashMap<>();
+        map.put("MediaVenda", priceHistoricRepository.calcularMediaPrecoVendaBandeira(bandeira));
+        map.put("MediaCompra", priceHistoricRepository.calcularMediaPrecoCompraBandeira(bandeira));
+        return responseService.ok(map);
+    }
+
 }
